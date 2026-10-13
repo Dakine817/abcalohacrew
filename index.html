@@ -7,7 +7,7 @@
 <meta name="description" content="AI that answers leads, books estimates, follows up on quotes, and gets reviews for Hawaii HVAC, electrical, plumbing, and home-service contractors. Built by contractors.">
 <link rel="canonical" href="https://abcalohacrew.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#020617">
+<meta name="theme-color" content="#fffefb">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abcalohacrew.com/">
 <meta property="og:site_name" content="ABC Aloha Crew AI">
@@ -32,93 +32,178 @@
   ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mona+Sans:wght@500;600&display=swap" rel="stylesheet">
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
-html { scroll-behavior:smooth; }
-body { background:radial-gradient(circle at top,#0f172a,#020617); background-color:#020617; color:white; overflow-x:hidden; line-height:1.5; }
-.container { width:90%; max-width:1200px; margin:auto; }
-a { color:#00f0ff; }
-nav { display:flex; justify-content:space-between; padding:20px 0; align-items:center; gap:16px; }
-.logo { font-size:1.5rem; font-weight:bold; background:linear-gradient(90deg,#00f0ff,#8a2eff); -webkit-background-clip:text; background-clip:text; color:transparent; }
-nav a { color:#94a3b8; text-decoration:none; margin-left:24px; font-size:.95rem; transition:color .2s; white-space:nowrap; }
-nav a:hover { color:#00f0ff; }
-.hero { display:flex; align-items:center; justify-content:space-between; min-height:85vh; gap:40px; padding:40px 0; }
-.hero h1 { font-size:3.5rem; line-height:1.2; background:linear-gradient(90deg,#00f0ff,#8a2eff); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.hero p { margin:20px 0; color:#94a3b8; font-size:1.2rem; max-width:600px; }
-.btn { display:inline-block; padding:12px 28px; border-radius:12px; border:none; cursor:pointer; margin:0 10px 10px 0; font-weight:bold; text-decoration:none; transition:.3s; }
-.primary { background:linear-gradient(90deg,#00f0ff,#8a2eff); color:black; }
-.primary:hover { transform:scale(1.05); box-shadow:0 0 20px #00f0ff; }
-.secondary { background:rgba(255,255,255,.08); color:white; backdrop-filter:blur(10px); }
-.crew-card { width:420px; min-width:300px; padding:28px; border-radius:20px; background:rgba(255,255,255,.05); backdrop-filter:blur(20px); box-shadow:0 0 40px rgba(0,255,255,.1); flex-shrink:0; }
-.crew-card h2 { font-size:1.1rem; color:#e2e8f0; margin-bottom:16px; }
-.crew-card ul { list-style:none; }
-.crew-card li { color:#e2e8f0; margin-bottom:12px; padding-left:28px; position:relative; }
-.crew-card li::before { content:"\2713"; position:absolute; left:0; color:#00f0ff; font-weight:bold; }
-.section { padding:90px 0; text-align:center; }
-.section h2 { font-size:2.5rem; margin-bottom:20px; }
-.lead { color:#94a3b8; max-width:700px; margin:0 auto; font-size:1.1rem; }
-.cards { display:flex; gap:20px; margin-top:50px; flex-wrap:wrap; }
-.card { flex:1; min-width:220px; padding:30px; border-radius:20px; background:rgba(255,255,255,.04); backdrop-filter:blur(15px); transition:.3s; }
-.card:hover { transform:translateY(-6px); box-shadow:0 0 30px rgba(138,43,226,.3); }
-.card h3 { margin-bottom:12px; font-size:1.15rem; }
-.card p { color:#cbd5e1; }
-.plans { display:flex; gap:20px; margin-top:50px; flex-wrap:wrap; align-items:stretch; }
-.plan { flex:1; min-width:250px; padding:32px; border-radius:20px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); text-align:left; display:flex; flex-direction:column; position:relative; }
-.plan.featured { border:1px solid #00f0ff; box-shadow:0 0 30px rgba(0,240,255,.15); }
-.badge { position:absolute; top:-12px; left:32px; background:linear-gradient(90deg,#00f0ff,#8a2eff); color:black; font-size:.75rem; font-weight:bold; padding:4px 12px; border-radius:999px; text-transform:uppercase; letter-spacing:.05em; }
-.plan h3 { font-size:1.3rem; }
-.price { font-size:2.4rem; font-weight:bold; margin:10px 0 4px; }
-.price span { font-size:1rem; color:#94a3b8; font-weight:normal; }
-.plan .for { color:#94a3b8; margin-bottom:20px; }
-.plan ul { list-style:none; margin-bottom:28px; flex:1; }
-.plan li { color:#e2e8f0; padding:6px 0 6px 26px; position:relative; }
-.plan li::before { content:"\2713"; position:absolute; left:0; color:#00f0ff; font-weight:bold; }
-.plan .btn { text-align:center; margin:0; }
-.about { max-width:760px; margin:0 auto; color:#cbd5e1; font-size:1.1rem; }
-.about p + p { margin-top:16px; }
-.form-wrapper { max-width:640px; margin:40px auto 0; padding:40px; border-radius:20px; background:rgba(255,255,255,.05); backdrop-filter:blur(20px); box-shadow:0 0 40px rgba(0,255,255,.08); text-align:left; }
-.form-row { display:flex; gap:16px; }
-.form-group { display:flex; flex-direction:column; margin-bottom:18px; flex:1; }
-.form-group label { font-size:.85rem; color:#94a3b8; margin-bottom:6px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
-.form-group input,.form-group textarea { padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:white; font-size:1rem; outline:none; transition:border .2s,box-shadow .2s; width:100%; font-family:inherit; }
-.form-group input::placeholder,.form-group textarea::placeholder { color:#64748b; }
-.form-group input:focus,.form-group textarea:focus { border-color:#00f0ff; box-shadow:0 0 10px rgba(0,240,255,.2); }
-.form-group textarea { resize:vertical; min-height:110px; }
+:root {
+  --lava:#c9471a; --lava-hover:#a93a14; --lava-soft:#fbe7dd;
+  --ink:#201515; --body:#605d52; --mute:#c5c0b1; --hint:#939084;
+  --canvas:#fffefb; --cream:#f8f4f0; --hairline:#e6dfd3;
+  --r-sm:6px; --r-md:12px;
+  --display:'Mona Sans','Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --text:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:80px; }
+body { background:var(--canvas); color:var(--ink); font-family:var(--text); font-size:18px; line-height:1.5; overflow-x:hidden; }
+.container { width:min(1200px, calc(100% - 32px)); margin:0 auto; }
+a { color:var(--lava); }
+a:hover { color:var(--lava-hover); }
+:focus-visible { outline:3px solid var(--lava); outline-offset:2px; }
+h1, h2, .display { font-family:var(--display); font-weight:500; letter-spacing:-0.02em; color:var(--ink); }
+
+/* nav */
+.site-nav { position:sticky; top:0; z-index:10; background:var(--canvas); border-bottom:1px solid var(--hairline); }
+.site-nav .container { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; }
+.logo { font-family:var(--display); font-weight:600; font-size:1.25rem; color:var(--ink); text-decoration:none; }
+.logo span { color:var(--lava); }
+.nav-links { display:flex; align-items:center; gap:28px; }
+.nav-links a { color:var(--ink); text-decoration:none; font-size:16px; }
+.nav-links a:hover { color:var(--lava); }
+
+/* buttons */
+.btn { display:inline-block; font-family:var(--text); font-size:18px; font-weight:600; line-height:27px; padding:12px 24px; border-radius:var(--r-md); border:1px solid transparent; text-decoration:none; cursor:pointer; text-align:center; transition:background-color .15s, color .15s; }
+.btn-primary { background:var(--lava); color:var(--canvas); }
+.btn-primary:hover { background:var(--lava-hover); color:var(--canvas); }
+.btn-outline { background:var(--canvas); color:var(--ink); border-color:var(--ink); }
+.btn-outline:hover { background:var(--cream); color:var(--ink); }
+.btn-sm { font-size:15px; line-height:20px; padding:9px 16px; }
+.nav-links .btn-primary { color:var(--canvas); }
+
+/* bands */
+.band { padding:96px 0; }
+.band-cream { background:var(--cream); }
+.band-ink { background:var(--ink); color:var(--cream); }
+.section-head { max-width:720px; margin:0 auto 48px; text-align:center; }
+.section-head h2 { font-size:48px; line-height:1.05; margin-bottom:16px; }
+.lead { color:var(--body); font-size:20px; line-height:30px; }
+.eyebrow { display:inline-block; font-family:var(--display); font-size:14px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--ink); margin-bottom:16px; }
+
+/* hero */
+.hero { padding:80px 0 96px; }
+.hero .container { display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
+.hero h1 { font-size:60px; line-height:1.02; margin-bottom:24px; }
+.hero .lead { max-width:560px; margin-bottom:32px; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.crew-card { background:var(--ink); color:var(--cream); border-radius:var(--r-md); padding:36px; }
+.crew-card h2 { font-family:var(--text); color:var(--cream); font-size:20px; font-weight:700; letter-spacing:-0.3px; margin-bottom:24px; }
+.checks { list-style:none; }
+.checks li { position:relative; padding-left:36px; margin-bottom:16px; }
+.checks li:last-child { margin-bottom:0; }
+.checks li::before { content:"\2713"; position:absolute; left:0; top:2px; width:24px; height:24px; border-radius:50%; background:var(--lava); color:var(--canvas); font-size:13px; font-weight:700; line-height:24px; text-align:center; }
+
+/* cards */
+.grid { display:grid; gap:20px; }
+.grid-3 { grid-template-columns:repeat(3, 1fr); }
+.grid-4 { grid-template-columns:repeat(4, 1fr); }
+.card { background:var(--canvas); border-radius:var(--r-md); padding:28px; }
+.band-cream .card { background:var(--canvas); }
+.band:not(.band-cream) .card { background:var(--cream); }
+.card h3 { font-size:22px; font-weight:600; letter-spacing:-0.5px; line-height:1.25; margin-bottom:10px; }
+.card p { color:var(--body); font-size:17px; line-height:26px; }
+.icon { width:48px; height:48px; border-radius:var(--r-md); background:var(--lava-soft); color:var(--lava); display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
+.icon svg { width:24px; height:24px; }
+.steps { counter-reset:step; }
+.step::before { counter-increment:step; content:counter(step); display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:var(--lava); color:var(--canvas); font-family:var(--display); font-weight:600; font-size:18px; margin-bottom:20px; }
+
+/* pricing */
+.plans { display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; align-items:stretch; }
+.plan { position:relative; display:flex; flex-direction:column; background:var(--canvas); border:1px solid var(--ink); border-radius:var(--r-md); padding:32px; }
+.plan h3 { font-size:22px; font-weight:600; letter-spacing:-0.5px; }
+.price { font-family:var(--display); font-size:48px; font-weight:500; letter-spacing:-0.02em; line-height:1; margin:16px 0 8px; }
+.price span { font-family:var(--text); font-size:17px; font-weight:400; letter-spacing:0; color:var(--body); }
+.plan .for { color:var(--body); font-size:17px; margin-bottom:24px; min-height:52px; }
+.plan .checks { flex:1; margin-bottom:28px; }
+.plan .checks li { font-size:17px; margin-bottom:12px; }
+.plan .checks li::before { width:22px; height:22px; line-height:22px; font-size:12px; top:2px; }
+.plan .btn { width:100%; }
+.plan.featured { background:var(--ink); border-color:var(--ink); color:var(--cream); }
+.plan.featured h3 { color:var(--cream); }
+.plan.featured .price span, .plan.featured .for { color:var(--mute); }
+.badge { position:absolute; top:-13px; left:32px; background:var(--lava); color:var(--canvas); font-size:13px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:4px 12px; border-radius:999px; }
+
+/* about */
+.about { display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:start; }
+.about h2 { font-size:44px; line-height:1.05; }
+.about p { color:var(--body); font-size:20px; line-height:31px; }
+.about p + p { margin-top:18px; }
+
+/* form */
+.form-wrapper { max-width:680px; margin:0 auto; background:var(--canvas); border:1px solid var(--hairline); border-radius:var(--r-md); padding:40px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-group { display:flex; flex-direction:column; margin-bottom:20px; }
+.form-group label { font-size:16px; font-weight:600; color:var(--ink); margin-bottom:6px; }
+.form-group input, .form-group textarea { font-family:var(--text); font-size:17px; color:var(--ink); background:var(--canvas); border:1px solid var(--ink); border-radius:var(--r-sm); padding:12px 16px; width:100%; outline:none; transition:box-shadow .15s, border-color .15s; }
+.form-group input::placeholder, .form-group textarea::placeholder { color:var(--hint); }
+.form-group input:focus, .form-group textarea:focus { border-color:var(--lava); box-shadow:0 0 0 3px rgba(201,71,26,.22); }
+.form-group textarea { resize:vertical; min-height:120px; }
 .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
-.form-submit { width:100%; padding:14px; border-radius:12px; border:none; cursor:pointer; font-weight:bold; font-size:1.05rem; background:linear-gradient(90deg,#00f0ff,#8a2eff); color:black; transition:.3s; margin-top:6px; }
-.form-submit:hover { transform:scale(1.02); box-shadow:0 0 20px #00f0ff; }
-.form-submit:disabled { opacity:.6; cursor:not-allowed; transform:none; }
-.form-note { color:#94a3b8; font-size:.85rem; margin-top:14px; text-align:center; }
-.form-message { margin-top:16px; padding:12px 16px; border-radius:10px; font-weight:600; display:none; text-align:center; }
-.form-message.success { background:rgba(34,197,94,.15); border:1px solid #22c55e; color:#22c55e; }
-.form-message.error { background:rgba(239,68,68,.15); border:1px solid #ef4444; color:#ef4444; }
-.cta { font-size:2.5rem; margin-bottom:20px; font-weight:bold; }
-footer { padding:40px 0; text-align:center; color:#94a3b8; font-size:.95rem; }
-footer p + p { margin-top:8px; }
-@media(max-width:768px){.hero{flex-direction:column;text-align:center;min-height:auto}.hero h1{font-size:2.2rem}.hero p{margin-left:auto;margin-right:auto}.crew-card{width:100%;min-width:unset;text-align:left}.form-row{flex-direction:column;gap:0}.form-wrapper{padding:24px}.section{padding:70px 0}.section h2{font-size:1.8rem}.cta{font-size:1.8rem}nav{flex-direction:column}nav a{margin:0 10px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.form-submit { width:100%; margin-top:4px; border:none; }
+.form-submit:disabled { opacity:.6; cursor:not-allowed; }
+.form-note { color:var(--body); font-size:15px; margin-top:16px; text-align:center; }
+.form-message { margin-top:16px; padding:12px 16px; border-radius:var(--r-sm); font-weight:600; font-size:16px; display:none; text-align:center; }
+.form-message.success { background:#e8f4ea; border:1px solid #2f7a45; color:#1f5c33; }
+.form-message.error { background:#fbeae6; border:1px solid #b42318; color:#9a1e14; }
+
+/* closing CTA + footer */
+.cta-band { text-align:center; padding:96px 0 88px; }
+.cta-band .display { color:var(--cream); font-size:48px; line-height:1.05; margin-bottom:28px; }
+footer { background:var(--ink); color:var(--mute); font-size:16px; text-align:center; padding:28px 0 40px; border-top:1px solid rgba(248,244,240,.14); }
+footer a { color:var(--cream); }
+footer a:hover { color:var(--canvas); }
+footer p + p { margin-top:6px; }
+
+@media (max-width:1000px) {
+  .grid-4 { grid-template-columns:repeat(2, 1fr); }
+  .plans, .grid-3 { grid-template-columns:1fr; max-width:560px; margin:0 auto; }
+  .plan .for { min-height:0; }
+}
+@media (max-width:860px) {
+  .hero .container, .about { grid-template-columns:1fr; gap:36px; }
+  .hero { padding:48px 0 72px; }
+  .hero h1 { font-size:42px; }
+  .section-head h2, .about h2, .cta-band .display { font-size:34px; }
+  .band { padding:72px 0; }
+}
+@media (max-width:640px) {
+  .nav-links a:not(.btn) { display:none; }
+  .grid-4, .form-row { grid-template-columns:1fr; }
+  .form-row { gap:0; }
+  .form-wrapper, .crew-card { padding:24px; }
+  .hero h1 { font-size:36px; }
+  .lead, .about p { font-size:18px; line-height:28px; }
+  .hero-actions .btn { width:100%; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
 </style>
 </head>
 <body>
-<div class="container">
-  <nav>
-    <div class="logo">ABC Aloha Crew AI</div>
-    <div>
-      <a href="#how-it-works">How It Works</a>
+<header class="site-nav">
+  <div class="container">
+    <a class="logo" href="#top">ABC Aloha Crew <span>AI</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#how-it-works">How it works</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact">Book a Demo</a>
-    </div>
-  </nav>
-  <header class="hero">
+      <a class="btn btn-primary btn-sm" href="#contact">Book a demo</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="container">
     <div>
+      <span class="eyebrow">For Hawaii home-service contractors</span>
       <h1>More jobs booked. Less time on the phone.</h1>
-      <p>AI lead follow-up, booking, reviews, and marketing for Hawaii HVAC, electrical, plumbing, and home-service contractors &mdash; built by contractors who run their own crews.</p>
-      <a class="btn primary" href="#contact">Book a Free Demo</a>
-      <a class="btn secondary" href="#how-it-works">See How It Works</a>
+      <p class="lead">AI lead follow-up, booking, reviews, and marketing for Hawaii HVAC, electrical, plumbing, and home-service contractors &mdash; built by contractors who run their own crews.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Book a free demo</a>
+        <a class="btn btn-outline" href="#how-it-works">See how it works</a>
+      </div>
     </div>
     <div class="crew-card">
       <h2>While you're on the job, your AI crew:</h2>
-      <ul>
+      <ul class="checks">
         <li>Replies to every new lead in minutes, day or night</li>
         <li>Books estimates straight onto your calendar</li>
         <li>Follows up on quotes that went quiet</li>
@@ -126,109 +211,148 @@ footer p + p { margin-top:8px; }
         <li>Keeps your social pages posting</li>
       </ul>
     </div>
-  </header>
-</div>
-<main>
-<section class="section">
-  <h2>What We Do</h2>
-  <p class="lead">Most contractors don't lose jobs to bad work &mdash; they lose them to slow callbacks. We fix that.</p>
-  <div class="cards container">
-    <div class="card"><h3>Lead Follow-Up</h3><p>Website, Google, and Facebook leads get an instant text and email, then a follow-up until they book or say no.</p></div>
-    <div class="card"><h3>Booking &amp; Reviews</h3><p>Customers pick an estimate time online, get reminders, and get a review request after the job is done.</p></div>
-    <div class="card"><h3>Marketing on Autopilot</h3><p>Social posts written for your trade and your island, plus outreach to find new customers.</p></div>
   </div>
 </section>
-<section class="section" id="how-it-works">
-  <h2>How It Works</h2>
-  <div class="cards container">
-    <div class="card"><h3>1. Free demo call</h3><p>We look at how leads reach you today &mdash; phone, Google, website, Facebook &mdash; and where they slip through.</p></div>
-    <div class="card"><h3>2. We set it up</h3><p>We connect your forms, phone, and calendar. You don't have to touch the tech.</p></div>
-    <div class="card"><h3>3. AI follows up</h3><p>Every lead gets answered and pushed toward a booked estimate, even when you're on a roof.</p></div>
-    <div class="card"><h3>4. You see results</h3><p>A simple monthly report: leads in, estimates booked, reviews gained.</p></div>
-  </div>
-</section>
-<section class="section" id="pricing">
-  <h2>Pricing</h2>
-  <p class="lead">Simple monthly plans. Start small and add more as it pays for itself.</p>
-  <div class="plans container">
-    <div class="plan">
-      <h3>Starter</h3>
-      <div class="price">$97<span>/mo</span></div>
-      <p class="for">For solo operators who miss leads while working.</p>
-      <ul>
-        <li>Instant text + email reply to new leads</li>
-        <li>Automatic follow-up sequence</li>
-        <li>Lead log in Google Sheets or your CRM</li>
-        <li>Monthly lead report</li>
-      </ul>
-      <a class="btn secondary" href="#contact">Get Started</a>
+
+<section class="band band-cream">
+  <div class="container">
+    <div class="section-head">
+      <h2>What we do</h2>
+      <p class="lead">Most contractors don't lose jobs to bad work &mdash; they lose them to slow callbacks. We fix that.</p>
     </div>
-    <div class="plan featured">
-      <span class="badge">Most popular</span>
-      <h3>Growth</h3>
-      <div class="price">$297<span>/mo</span></div>
-      <p class="for">For shops ready to fill the calendar.</p>
-      <ul>
-        <li>Everything in Starter</li>
-        <li>Online estimate booking + reminders</li>
-        <li>Quote follow-up</li>
-        <li>Google review requests after each job</li>
-        <li>AI social posts, 3 per week</li>
-      </ul>
-      <a class="btn primary" href="#contact">Get Started</a>
-    </div>
-    <div class="plan">
-      <h3>Pro</h3>
-      <div class="price">$997<span>/mo</span></div>
-      <p class="for">Done-for-you growth for multi-truck crews.</p>
-      <ul>
-        <li>Everything in Growth</li>
-        <li>Outbound lead generation and outreach</li>
-        <li>Custom automations for your workflow</li>
-        <li>Monthly strategy call</li>
-        <li>Priority support</li>
-      </ul>
-      <a class="btn secondary" href="#contact">Get Started</a>
-    </div>
-  </div>
-</section>
-<section class="section" id="about">
-  <h2>Built by Contractors, for Contractors</h2>
-  <div class="about container">
-    <p>We run our own HVAC and electrical businesses. We know what it's like to miss a call because you're in an attic, then find out the customer already hired someone else.</p>
-    <p>So we built AI tools to answer, follow up, and book for our own crews first. ABC Aloha Crew AI brings those same tools to other contractors in Hawaii.</p>
-  </div>
-</section>
-<section class="section" id="contact">
-  <h2>Book Your Free Demo</h2>
-  <p class="lead">Tell us about your business and we'll show you exactly what AI can take off your plate.</p>
-  <div class="form-wrapper">
-    <form id="leadForm">
-      <div class="form-row">
-        <div class="form-group"><label for="f-name">Full Name *</label><input id="f-name" type="text" name="name" placeholder="Jane Smith" autocomplete="name" required></div>
-        <div class="form-group"><label for="f-email">Email *</label><input id="f-email" type="email" name="email" placeholder="jane@company.com" autocomplete="email" required></div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h7M8.5 14.5h4"/></svg></div>
+        <h3>Lead follow-up</h3>
+        <p>Website, Google, and Facebook leads get an instant text and email, then a follow-up until they book or say no.</p>
       </div>
-      <div class="form-row">
-        <div class="form-group"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" placeholder="(808) 555-0100" autocomplete="tel"></div>
-        <div class="form-group"><label for="f-business">Business Name</label><input id="f-business" type="text" name="business" placeholder="Aloha HVAC LLC" autocomplete="organization"></div>
+      <div class="card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15.5 2 2 4-4"/></svg></div>
+        <h3>Booking &amp; reviews</h3>
+        <p>Customers pick an estimate time online, get reminders, and get a review request after the job is done.</p>
       </div>
-      <div class="form-group"><label for="f-date">Preferred Demo Date</label><input id="f-date" type="date" name="date"></div>
-      <div class="form-group"><label for="f-message">Tell Us About Your Business</label><textarea id="f-message" name="message" placeholder="What trade are you in? What's your biggest headache with leads?"></textarea></div>
-      <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
-      <button type="submit" class="form-submit" id="submitBtn">Request My Free Demo</button>
-      <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
-      <p class="form-note">Prefer email? Write us at <a href="mailto:abcalohacrew@gmail.com">abcalohacrew@gmail.com</a>. See our <a href="privacy.html">privacy policy</a>.</p>
-    </form>
+      <div class="card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
+        <h3>Marketing on autopilot</h3>
+        <p>Social posts written for your trade and your island, plus outreach to find new customers.</p>
+      </div>
+    </div>
   </div>
 </section>
-<section class="section">
-  <div class="cta">Stop chasing leads. Let AI do it.</div>
-  <a class="btn primary" href="#contact">Book a Free Demo</a>
+
+<section class="band" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+    <div class="grid grid-4 steps">
+      <div class="card step"><h3>Free demo call</h3><p>We look at how leads reach you today &mdash; phone, Google, website, Facebook &mdash; and where they slip through.</p></div>
+      <div class="card step"><h3>We set it up</h3><p>We connect your forms, phone, and calendar. You don't have to touch the tech.</p></div>
+      <div class="card step"><h3>AI follows up</h3><p>Every lead gets answered and pushed toward a booked estimate, even when you're on a roof.</p></div>
+      <div class="card step"><h3>You see results</h3><p>A simple monthly report: leads in, estimates booked, reviews gained.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-cream" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <h2>Pricing</h2>
+      <p class="lead">Simple monthly plans. Start small and add more as it pays for itself.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">$97<span>/mo</span></div>
+        <p class="for">For solo operators who miss leads while working.</p>
+        <ul class="checks">
+          <li>Instant text + email reply to new leads</li>
+          <li>Automatic follow-up sequence</li>
+          <li>Lead log in Google Sheets or your CRM</li>
+          <li>Monthly lead report</li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Get started</a>
+      </div>
+      <div class="plan featured">
+        <span class="badge">Most popular</span>
+        <h3>Growth</h3>
+        <div class="price">$297<span>/mo</span></div>
+        <p class="for">For shops ready to fill the calendar.</p>
+        <ul class="checks">
+          <li>Everything in Starter</li>
+          <li>Online estimate booking + reminders</li>
+          <li>Quote follow-up</li>
+          <li>Google review requests after each job</li>
+          <li>AI social posts, 3 per week</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Get started</a>
+      </div>
+      <div class="plan">
+        <h3>Pro</h3>
+        <div class="price">$997<span>/mo</span></div>
+        <p class="for">Done-for-you growth for multi-truck crews.</p>
+        <ul class="checks">
+          <li>Everything in Growth</li>
+          <li>Outbound lead generation and outreach</li>
+          <li>Custom automations for your workflow</li>
+          <li>Monthly strategy call</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="container about">
+    <h2>Built by contractors, for contractors</h2>
+    <div>
+      <p>We run our own HVAC and electrical businesses. We know what it's like to miss a call because you're in an attic, then find out the customer already hired someone else.</p>
+      <p>So we built AI tools to answer, follow up, and book for our own crews first. ABC Aloha Crew AI brings those same tools to other contractors in Hawaii.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-cream" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Book your free demo</h2>
+      <p class="lead">Tell us about your business and we'll show you exactly what AI can take off your plate.</p>
+    </div>
+    <div class="form-wrapper">
+      <form id="leadForm">
+        <div class="form-row">
+          <div class="form-group"><label for="f-name">Full name *</label><input id="f-name" type="text" name="name" placeholder="Jane Smith" autocomplete="name" required></div>
+          <div class="form-group"><label for="f-email">Email *</label><input id="f-email" type="email" name="email" placeholder="jane@company.com" autocomplete="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="f-phone">Phone</label><input id="f-phone" type="tel" name="phone" placeholder="(808) 555-0100" autocomplete="tel"></div>
+          <div class="form-group"><label for="f-business">Business name</label><input id="f-business" type="text" name="business" placeholder="Aloha HVAC LLC" autocomplete="organization"></div>
+        </div>
+        <div class="form-group"><label for="f-date">Preferred demo date</label><input id="f-date" type="date" name="date"></div>
+        <div class="form-group"><label for="f-message">Tell us about your business</label><textarea id="f-message" name="message" placeholder="What trade are you in? What's your biggest headache with leads?"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <button type="submit" class="btn btn-primary form-submit" id="submitBtn">Request my free demo</button>
+        <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        <p class="form-note">Prefer email? Write us at <a href="mailto:abcalohacrew@gmail.com">abcalohacrew@gmail.com</a>. See our <a href="privacy.html">privacy policy</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="band-ink cta-band">
+  <div class="container">
+    <div class="display">Stop chasing leads. Let AI do it.</div>
+    <a class="btn btn-primary" href="#contact">Book a free demo</a>
+  </div>
 </section>
 </main>
 <footer>
-  <p><a href="mailto:abcalohacrew@gmail.com">abcalohacrew@gmail.com</a> &middot; Serving contractors across Hawaii</p>
-  <p>&copy; 2026 ABC Aloha Crew AI &middot; <a href="privacy.html">Privacy Policy</a></p>
+  <div class="container">
+    <p><a href="mailto:abcalohacrew@gmail.com">abcalohacrew@gmail.com</a> &middot; Serving contractors across Hawaii</p>
+    <p>&copy; 2026 ABC Aloha Crew AI &middot; <a href="privacy.html">Privacy policy</a></p>
+  </div>
 </footer>
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyN7jK3Za8KvLcpheA37Mi4O4oE6BXZxOSYiU-z1hhzmStVn6LjqCOduyfzSeSgZQU-WA/exec';
@@ -248,7 +372,7 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
   fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)})
   .then(()=>{ show('Thanks! We will be in touch within 24 hours. No reply? Email abcalohacrew@gmail.com.', 'success'); this.reset(); })
   .catch(()=>{ show('Something went wrong. Please email us at abcalohacrew@gmail.com.', 'error'); })
-  .finally(()=>{ btn.disabled=false; btn.textContent='Request My Free Demo'; });
+  .finally(()=>{ btn.disabled=false; btn.textContent='Request my free demo'; });
 });
 </script>
 </body>
