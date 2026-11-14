@@ -86,6 +86,7 @@ h1, h2, .display { font-family:var(--display); font-weight:500; letter-spacing:-
 .hero h1 { font-size:60px; line-height:1.02; margin-bottom:24px; }
 .hero .lead { max-width:560px; margin-bottom:32px; }
 .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
+.center-actions { justify-content:center; margin-top:40px; }
 .crew-card { background:var(--ink); color:var(--cream); border-radius:var(--r-md); padding:36px; }
 .crew-card h2 { font-family:var(--text); color:var(--cream); font-size:20px; font-weight:700; letter-spacing:-0.3px; margin-bottom:24px; }
 .checks { list-style:none; }
@@ -185,6 +186,7 @@ footer p + p { margin-top:6px; }
     <nav class="nav-links" aria-label="Main">
       <a href="#how-it-works">How it works</a>
       <a href="#pricing">Pricing</a>
+      <a href="#handyman">Handyman</a>
       <a class="btn btn-primary btn-sm" href="#contact">Book a demo</a>
     </nav>
   </div>
@@ -314,7 +316,38 @@ footer p + p { margin-top:6px; }
   </div>
 </section>
 
-<section class="band band-cream" id="contact">
+<section class="band band-cream" id="handyman">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">ABC Aloha Crew Handyman</span>
+      <h2>Need a handyman in Honolulu?</h2>
+      <p class="lead">Our crew also takes care of repairs and small projects around the house, from Kalihi to Kahala.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Repairs</h3>
+        <p>Doors that stick, drywall holes, loose railings, worn fences and decks.</p>
+      </div>
+      <div class="card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8"/></svg></div>
+        <h3>Installs</h3>
+        <p>TV mounts, shelves, blinds, hardware, and furniture assembly.</p>
+      </div>
+      <div class="card">
+        <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="16" height="6" rx="2"/><path d="M10 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="8" y="16" width="4" height="6" rx="1"/></svg></div>
+        <h3>Small projects</h3>
+        <p>Paint touch-ups, pressure washing, and the punch list you keep putting off.</p>
+      </div>
+    </div>
+    <div class="hero-actions center-actions">
+      <a class="btn btn-primary" href="tel:+18085828482">Call (808) 582-8482</a>
+    </div>
+    <p class="form-note">After each job, we'll text you to ask how it went, with one reminder at most. Reply STOP anytime.</p>
+  </div>
+</section>
+
+<section class="band" id="contact">
   <div class="container">
     <div class="section-head">
       <h2>Book your free demo</h2>
@@ -350,7 +383,7 @@ footer p + p { margin-top:6px; }
 </main>
 <footer>
   <div class="container">
-    <p><a href="mailto:abcalohacrew@gmail.com">abcalohacrew@gmail.com</a> &middot; Serving contractors across Hawaii</p>
+    <p><a href="tel:+18085828482">(808) 582-8482</a> &middot; <a href="mailto:abcalohacrew@gmail.com">abcalohacrew@gmail.com</a> &middot; Serving contractors across Hawaii</p>
     <p>&copy; 2026 ABC Aloha Crew AI &middot; <a href="privacy.html">Privacy policy</a></p>
   </div>
 </footer>
